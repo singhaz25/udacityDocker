@@ -1,0 +1,55 @@
+leono@Amarinders-MacBook-Air:~/udaCity/udacityDocker$ kubectl logs deployment/proj4 
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 129-516-115
+leono@Amarinders-MacBook-Air:~/udaCity/udacityDocker$ ./make_prediction.sh 
+Port: 8000
+{
+  "prediction": [
+    20.35373177134412
+  ]
+}
+leono@Amarinders-MacBook-Air:~/udaCity/udacityDocker$ kubectl logs deployment/proj4 
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 129-516-115
+[2020-09-14 01:30:37,406] INFO in app: JSON payload: 
+{'CHAS': {'0': 0}, 'RM': {'0': 6.575}, 'TAX': {'0': 296.0}, 'PTRATIO': {'0': 15.3}, 'B': {'0': 396.9}, 'LSTAT': {'0': 4.98}}
+[2020-09-14 01:30:37,438] INFO in app: Inference payload DataFrame: 
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2020-09-14 01:30:37,455] INFO in app: Scaling Payload: 
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2020-09-14 01:30:37,461] INFO in app: Predicted Value: 
+[20.35373177134412]
+127.0.0.1 - - [14/Sep/2020 01:30:37] "POST /predict HTTP/1.1" 200 -
+
+
+==================================
+
+
+leono@Amarinders-MacBook-Air:~/udaCity/udacityDocker$ ./run_kubernetes.sh 
+Step 2
+kubectl run --generator=deployment/apps.v1 is DEPRECATED and will be removed in a future version. Use kubectl run --generator=run-pod/v1 or kubectl create instead.
+Error from server (AlreadyExists): deployments.apps "proj4" already exists
+ Step 3: List kubernetes pods
+NAME                     READY   STATUS    RESTARTS   AGE     LABELS
+proj4-78db9655d7-6sfms   1/1     Running   0          5m41s   app=proj4,pod-template-hash=78db9655d7
+Step 4:Forward the container port to a host
+Forwarding from 127.0.0.1:8000 -> 80
+Forwarding from [::1]:8000 -> 80
+Handling connection for 8000
+

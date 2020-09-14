@@ -4,15 +4,13 @@
 
 # Step 1:
 # This is your Docker ID/path
-# dockerpath=<>
+dockerpath=amar2507/udacityprojects
 
-# Step 2
-# Run the Docker Hub container with kubernetes
+echo "Step 2"
+kubectl run proj4 --image=$dockerpath:proj4 --port=80 --labels="app=proj4"
 
+echo " Step 3: List kubernetes pods"
+kubectl get pods --show-labels
 
-# Step 3:
-# List kubernetes pods
-
-# Step 4:
-# Forward the container port to a host
-
+echo "Step 4:Forward the container port to a host"
+kubectl port-forward deployment/proj4 8000:80

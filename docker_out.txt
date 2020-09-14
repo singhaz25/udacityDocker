@@ -1,0 +1,13 @@
+Sending build context to Docker daemon  93.18kB
+Step 1/6 : FROM python:3.7.3-stretch
+REPOSITORY                           TAG                                              IMAGE ID            CREATED             SIZE
+docker/desktop-kubernetes            kubernetes-v1.16.5-cni-v0.7.5-critools-v1.15.0   a86647f0b376        7 months ago        279MB
+k8s.gcr.io/kube-controller-manager   v1.16.5                                          441835dd2301        8 months ago        151MB
+k8s.gcr.io/kube-apiserver            v1.16.5                                          fc838b21afbb        8 months ago        159MB
+k8s.gcr.io/kube-proxy                v1.16.5                                          0ee1b8a3ebe0        8 months ago        82.7MB
+k8s.gcr.io/kube-scheduler            v1.16.5                                          b4d073a9efda        8 months ago        83.5MB
+docker/kube-compose-installer        v0.4.25-alpha1                                   2a71ac5a1359        10 months ago       42.3MB
+k8s.gcr.io/etcd                      3.3.15-0                                         b2756210eeab        12 months ago       247MB
+k8s.gcr.io/coredns                   1.6.2                                            bf261d157914        13 months ago       44.1MB
+hello-world                          latest                                           2cb0d9787c4d        2 years ago         1.85kB
+k8s.gcr.io/pause                     3.1                                              da86e6ba6ca1        2 years ago         742kB
