@@ -1,4 +1,4 @@
-https://circleci.com/gh/singhaz25/udacityDocker.svg?style=svg
+<https://circleci.com/gh/singhaz25/udacityDocker.svg?style=svg>
 
 ## Project Overview
 
