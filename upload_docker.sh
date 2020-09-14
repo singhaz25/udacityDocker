@@ -12,8 +12,7 @@ dockerpath=amar2507/udacityprojects
 echo "Docker ID and Image: $dockerpath"
 sudo docker login --username amar2507
 
-sudo docker tag d927f08c90c2 $dockerpath:proj4
+sudo docker tag udacityproj4 $dockerpath:proj4
 
 # Step 3:
-# Push image to a docker repository
 sudo docker push $dockerpath
