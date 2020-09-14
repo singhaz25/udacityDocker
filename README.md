@@ -1,4 +1,4 @@
-<include a CircleCI status badge, here>
+https://circleci.com/gh/singhaz25/udacityDocker.svg?style=svg
 
 ## Project Overview
 
