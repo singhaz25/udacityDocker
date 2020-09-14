@@ -1,5 +1,6 @@
-<https://circleci.com/gh/singhaz25/udacityDocker.svg?style=svg>
 
+
+[![CircleCI](https://circleci.com/gh/singhaz25/udacityDocker.svg?style=svg)](https://app.circleci.com/pipelines/github/singhaz25/udacityDocker)
 ## Project Overview
 
 In this project, you will apply the skills you have acquired in this course to operationalize a Machine Learning Microservice API. 
